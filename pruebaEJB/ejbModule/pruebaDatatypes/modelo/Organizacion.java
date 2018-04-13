@@ -42,6 +42,7 @@ public class Organizacion implements Serializable{
 		this.mapServicio = mapServicio;
 	}
 	public void agregarServicio(Servicio s) {
+		s.setOrganizacion(this);
 		mapServicio.put(s.getId(), s);
 	}
 	

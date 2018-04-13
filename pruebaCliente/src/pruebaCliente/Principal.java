@@ -2,24 +2,25 @@ package pruebaCliente;
 
 import java.util.Map;
 import java.util.Scanner;
-
+import javax.ejb.EJB;
 import pruebaDatatypes.modelo.Organizacion;
-//import pruebaDatatypes.modelo.Organizacion;
 import pruebaDatatypes.modelo.Servicio;
 import beans.interfaces.BeanTestRemote;
 import utils.Utils;
 
 public class Principal {
 
+	@EJB private static BeanTestRemote bean;
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		try {
-			BeanTestRemote bean = Utils.doLookup();
-			
+			//BeanTestRemote bean = Utils.doLookup();
+			bean = Utils.doLookup();
 			boolean fin = false;
 			String idServicio, descripcionServicio, wsdlServicio, disponibilidadServicio, nombreOrganizacion;
 			Scanner scanDatos = new Scanner(System.in);
-			int opcion, idOrganizacion;
+			int opcion;
 			while(!fin) {
 				System.out.println("Menu Principal");
 				System.out.println("==============");

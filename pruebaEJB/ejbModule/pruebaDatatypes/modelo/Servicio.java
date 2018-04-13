@@ -10,6 +10,8 @@ public class Servicio implements Serializable {
 	private String descripcion;
 	private String wsdl;
 	private String disponibilidad;
+	private Organizacion organizacion;
+	
 	public Servicio() {
 		super();
 	}
@@ -43,6 +45,12 @@ public class Servicio implements Serializable {
 	}
 	public void setDisponibilidad(String disponibilidad) {
 		this.disponibilidad = disponibilidad;
+	}
+	public Organizacion getOrganizacion() {
+		return organizacion;
+	}
+	public void setOrganizacion(Organizacion organizacion) {
+		this.organizacion = organizacion;
 	}
 	
 }
