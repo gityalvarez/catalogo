@@ -21,10 +21,10 @@
 			<div class="navbar-brand">Catalogo de Servicios</div>
 		</div>
 		<div class="row">
-			<div class="col-sm-3">
+			<div class="col-sm-4">
 				<!-- <div class="container"> -->
 				<h3 align="center">Agregar Servicio</h3>
-				<form class="form-horizontal" action="CatalogoDeServiciosServlet" method="POST">
+				<form class="form-horizontal" action="AgregarServicioServlet" method="POST">
 					<div class="form-group">
 						<label class="control-label col-sm-6" for="nombreOrganizacion">Organizacion:</label>
 						<div class="col-sm-6">
@@ -39,7 +39,6 @@
 							<input type="text" class="form-control" id="idServicio"
 								placeholder="Ingrese servicio" name="idServicio">
 						</div>	
-						<!-- <input type="hidden" id="idOrganizacion" name="idOrganizacion"/> -->
 					</div>
 					<div class="form-group">
 						<label class="control-label col-sm-6" for="descripcion">Descripcion:</label>
@@ -61,13 +60,6 @@
 							<input type="text" class="form-control" id="disponibilidad"
 								placeholder="Ingrese disponibilidad" name="disponibilidad">
 						</div>
-						<!-- 
-						<label class="radio-inline"> <input type="radio"
-							name="optradio">Si
-						</label> <label class="radio-inline"> <input type="radio"
-							name="optradio">No
-						</label>
-						 -->
 					</div>
 					<div class="form-group">
 						<div class="col-sm-offset-2 col-sm-10">
@@ -126,13 +118,6 @@
 					$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
 				});
 			});
-
-		    $("#editButton").click(function(){
-		    	$("#organizacion").val("1");
-		    	$("#descripcion").val("2");
-		    	$("#wsdl").val("3");
-				$("#btnAccion").val("Actualizar Servicio");
-		    });
 		});
 	</script>
 </body>
